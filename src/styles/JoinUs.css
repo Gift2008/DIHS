@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ── Page Wrapper ───────────────────────────────────────────────── */
+.reg-page {
+  margin-top: 80px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  padding: 48px 16px 64px;
+}
+.reg-status-title {
+  color: white !important;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.reg-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.reg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(224, 123, 48, 0.1);
+  border: 1px solid rgba(224, 123, 48, 0.3);
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 14px;
+}
+
+.reg-badge-icon {
+  font-size: 20px;
+}
+
+.reg-badge-text {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.reg-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--bg-input);
+  margin-bottom: 6px;
+}
+
+.reg-deadline {
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+.reg-deadline span {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+/* ── Step Pills ─────────────────────────────────────────────────── */
+.reg-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step-pill {
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  background: #fff;
+  color: var(--bg-input);
+  border: 0.5px solid var(--text-primary);
+}
+
+.step-pill.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.step-pill.done {
+  background: #0d3028;
+  color: #fff;
+}
+
+/* ── Progress Bar ───────────────────────────────────────────────── */
+.reg-progress-track {
+  height: 4px;
+  background: #0a1e20;
+  border-radius: 2px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.reg-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* ── Card ───────────────────────────────────────────────────────── */
+.reg-card {
+  background: linear-gradient(
+    160deg,
+    var(--bg-deep) 0%,
+    #0a1a1f 55%,
+    #051210 100%
+  );
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  backdrop-filter: blur(10px);
+}
+
+.reg-step-label {
+  font-size: 11px;
+  color: var(--text-faint);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+/* ── Section Titles ─────────────────────────────────────────────── */
+.v {
+  color: var(--text-faint) !important;
+  font-size: 12px;
+}
+.reg-section-title {
+  font-family: var(--font-display);
+  font-size: 21px;
+  color: var(--text-primary);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.reg-sub-title {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+/* ── Form Controls (Override Bootstrap) ─────────────────────────── */
+.reg-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-blue-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.reg-label .required {
+  color: var(--danger);
+}
+
+.reg-input,
+.reg-select,
+.reg-textarea {
+  background-color: var(--bg-input) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  color: var(--text-primary) !important;
+  font-size: 14px !important;
+  font-family: var(--font-body) !important;
+  transition: border-color 0.2s !important;
+}
+
+.reg-input::placeholder,
+.reg-textarea::placeholder {
+  color: var(--text-faint) !important;
+}
+
+.reg-input:focus,
+.reg-select:focus,
+.reg-textarea:focus {
+  background-color: var(--bg-input) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(224, 123, 48, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+.reg-select option {
+  background: #0b1c2c;
+  color: var(--text-primary);
+}
+
+/* ── Radio & Checkbox ───────────────────────────────────────────── */
+.reg-radio-group,
+.reg-check-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reg-radio-group .form-check,
+.reg-check-group .form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.reg-radio-group .form-check-label,
+.reg-check-group .form-check-label {
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.form-check-input {
+  background-color: var(--bg-input) !important;
+  border: 2px solid var(--border) !important;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(224, 123, 48, 0.2) !important;
+}
+
+/* Stack checkboxes vertically when they're long text */
+.reg-check-stack .form-check {
+  width: 100%;
+}
+
+/* ── Helper Text ────────────────────────────────────────────────── */
+.reg-hint {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+
+/* ── Divider ────────────────────────────────────────────────────── */
+.reg-divider {
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+/* ── Navigation Buttons ─────────────────────────────────────────── */
+.reg-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  margin-top: 32px;
+}
+
+.btn-reg-back {
+  background: transparent !important;
+  border: 1px solid var(--border) !important;
+  color: var(--accent-blue-light) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  transition: all 0.2s !important;
+}
+
+.btn-reg-back:disabled {
+  color: var(--border) !important;
+  cursor: not-allowed !important;
+}
+
+.btn-reg-back:hover:not(:disabled) {
+  background: rgba(224, 123, 48, 0.08) !important;
+  border-color: var(--accent) !important;
+}
+
+.btn-reg-next {
+  background: linear-gradient(
+    135deg,
+    var(--accent-dark),
+    var(--accent)
+  ) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  padding: 10px 28px !important;
+  letter-spacing: 0.03em !important;
+  transition: opacity 0.2s !important;
+}
+
+.btn-reg-next:hover {
+  opacity: 0.9 !important;
+}
+
+.btn-reg-submit {
+  background: linear-gradient(135deg, #157a4a, var(--success)) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  padding: 10px 28px !important;
+  transition: opacity 0.2s !important;
+}
+
+.btn-reg-submit:disabled {
+  background: #0a2a1a !important;
+  color: #1a4a30 !important;
+  cursor: not-allowed !important;
+}
+
+.btn-reg-submit:hover:not(:disabled) {
+  opacity: 0.9 !important;
+}
+
+/* ── Closed / Success Screens ───────────────────────────────────── */
+.reg-status-screen {
+  text-align: center;
+  padding: 64px 40px;
+}
+
+.reg-status-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.reg-status-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.reg-status-title.closed {
+  color: var(--danger);
+}
+.reg-status-title.success {
+  color: var(--success);
+}
+
+.reg-status-body {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.reg-status-note {
+  color: var(--text-faint);
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+/* ── Consent Info Box ───────────────────────────────────────────── */
+.reg-info-box {
+  background: rgba(224, 123, 48, 0.06);
+  border: 1px solid rgba(224, 123, 48, 0.2);
+  border-radius: 10px;
+  padding: 16px 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* ── Footer ─────────────────────────────────────────────────────── */
+.reg-footer {
+  text-align: center;
+  color: #2a4a48;
+  font-size: 12px;
+  margin-top: 20px;
+}

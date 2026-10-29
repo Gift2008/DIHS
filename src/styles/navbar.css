@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ── Base ───────────────────────────────────────── */
+.nb {
+  background: rgba(5, 16, 15, 0.92) !important;
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  padding: 18px 0;
+  font-family: var(--font-body);
+}
+
+.nb--scrolled {
+  background: rgba(5, 16, 15, 0.92) !important;
+  border-bottom-color: var(--border) !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+  padding: 10px 0;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nb-container {
+  display: flex;
+  align-items: center;
+}
+
+/* ── Brand ──────────────────────────────────────── */
+.nb-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+}
+
+.nb-logo-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(224, 123, 48, 0.12);
+  border: 1px solid rgba(224, 123, 48, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nb-logo-wrap img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.nb-wordmark {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.nb-wordmark .m {
+  color: var(--accent);
+}
+
+/* ── Hamburger ──────────────────────────────────── */
+.nb-toggle {
+  background: none !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 8px 10px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: none !important;
+}
+
+.nb-toggle:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(224, 123, 48, 0.2) !important;
+}
+
+/* Hide the default Bootstrap icon */
+.nb-toggle .navbar-toggler-icon {
+  display: none;
+}
+
+.nb-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-muted);
+  border-radius: 2px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Animate to X when open */
+.nb-toggle-bar--open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--accent);
+}
+.nb-toggle-bar--open:nth-child(2) {
+  opacity: 0;
+}
+.nb-toggle-bar--open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--accent);
+}
+
+/* ── Nav Links ──────────────────────────────────── */
+.nb-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nb-link {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  letter-spacing: 0.04em;
+  padding: 8px 14px !important;
+  border-radius: 8px;
+  transition:
+    color 0.2s,
+    background 0.2s !important;
+  position: relative;
+}
+
+.nb-link::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 16px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: transform 0.2s ease;
+}
+
+.nb-link:hover {
+  color: var(--text-primary) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.nb-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ── CTA Link ───────────────────────────────────── */
+.nb-link--cta {
+  color: #fff !important;
+  background: var(--accent) !important;
+  border-radius: 8px;
+  padding: 8px 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  transition:
+    opacity 0.2s,
+    transform 0.2s !important;
+}
+
+.nb-link--cta::after {
+  display: none;
+}
+
+.nb-link--cta:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  color: #fff !important;
+  background: linear-gradient(
+    135deg,
+    var(--accent-dark),
+    var(--accent)
+  ) !important;
+}
+
+/* ── Mobile Collapse ────────────────────────────── */
+@media (max-width: 991px) {
+  .nb-collapse {
+    background: rgba(5, 16, 15, 0.97);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-top: 12px;
+    padding: 16px;
+    backdrop-filter: blur(20px);
+  }
+
+  .nb-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .nb-link,
+  .nb-link--cta {
+    text-align: center;
+    padding: 12px 16px !important;
+  }
+
+  .nb-link--cta {
+    margin-top: 8px;
+  }
+
+  .nb-link::after {
+    display: none;
+  }
+}

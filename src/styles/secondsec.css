@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,700&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ── Page Wrapper ───────────────────────────────── */
+.ss-page {
+  color: var(--text-primary);
+  /* font-family: var(--font-body); */
+  min-height: 100vh;
+}
+
+/* ── Section shared head ────────────────────────── */
+.ss-section-head {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.ss-section-title {
+  margin: 0 0 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.ss-section-title span {
+  color: var(--accent);
+}
+
+.ss-divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+
+.ss-section-sub {
+  font-size: 0.9rem;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ── SINCE 2004 ─────────────────────────────────── */
+.ss-since {
+  padding: 80px 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ss-since-row {
+  margin-top: 8px;
+}
+
+.ss-since-text {
+  padding-right: 40px;
+}
+
+.ss-since-text p {
+  color: var(--bg-input);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.ss-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: gap 0.2s;
+}
+
+.ss-cta-link:hover {
+  gap: 14px;
+  color: var(--accent);
+}
+
+.ss-cta-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.ss-cta-link:hover .ss-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* Image frames */
+.ss-img-col {
+  display: flex;
+  justify-content: center;
+}
+
+.ss-img-frame {
+  position: relative;
+  display: inline-block;
+}
+
+.ss-img-frame img {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.ss-img-frame--right img {
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 0;
+}
+
+.ss-img-frame--left img {
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 0;
+}
+
+.ss-img-label {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(5, 16, 15, 0.78);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 5px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ── DISCIPLINES GRID ───────────────────────────── */
+.ss-disciplines {
+  padding: 60px 40px 80px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  background: linear-gradient(
+    160deg,
+    var(--bg-deep) 0%,
+    #0a1a1f 55%,
+    #051210 100%
+  ) !important;
+}
+
+.ss-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.ss-card {
+  background: rgba(10, 26, 31, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.ss-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 56px rgba(224, 123, 48, 0.14);
+  border-color: rgba(224, 123, 48, 0.4);
+}
+
+.ss-card-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.ss-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.ss-card:hover .ss-card-img {
+  transform: scale(1.06);
+}
+
+.ss-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 16, 15, 0.1) 0%,
+    rgba(5, 16, 15, 0.6) 100%
+  );
+}
+
+.ss-card-num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.8;
+  line-height: 1;
+}
+
+.ss-card-body {
+  padding: 22px 22px 26px;
+}
+
+.ss-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 10px;
+}
+
+.ss-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── DONATIONS ──────────────────────────────────── */
+.ss-donate {
+  padding: 80px 0 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.ss-donate-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.ss-donate-img-wrap {
+  position: relative;
+}
+
+.ss-donate-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.ss-label-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-blue-light);
+  border: 1px solid rgba(93, 144, 133, 0.3);
+  border-radius: 100px;
+  padding: 4px 14px;
+  margin-bottom: 22px;
+}
+
+.ss-donate-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--bg-card);
+  line-height: 1.25;
+  margin: 0 0 24px;
+}
+
+.ss-donate-heading span {
+  color: var(--accent);
+}
+
+.ss-donate-body {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+
+.ss-btn-donate {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition:
+    background 1s,
+    opacity 0.2s,
+    transform 0.2s,
+    gap 0.2s;
+}
+
+.ss-btn-donate:hover {
+  transform: translateY(-2px);
+  transition: 1s;
+  gap: 16px;
+  color: #fff;
+  background: var(--bg-input);
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .ss-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ss-since,
+  .ss-disciplines,
+  .ss-donate {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ss-since-text {
+    padding-right: 0;
+  }
+
+  .ss-records-inner,
+  .ss-donate-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .ss-stats-row {
+    gap: 28px;
+  }
+
+  .ss-donate-img-badge {
+    right: 12px;
+  }
+
+  .ss-img-frame img {
+    width: 180px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ss-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

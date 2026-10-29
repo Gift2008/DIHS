@@ -1,0 +1,7 @@
+.fourofour {
+    height: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}

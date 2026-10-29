@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ── Wrapper ────────────────────────────────────── */
+.hero-carousel-wrapper {
+  position: relative;
+  margin: 4px 10px 0;
+  border-radius: 24px;
+  overflow: hidden;
+  /* box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6); */
+}
+
+/* ── Bootstrap carousel overrides ──────────────── */
+.hero-carousel-wrapper .carousel,
+.hero-carousel-wrapper .carousel-inner,
+.hero-carousel-wrapper .carousel-item {
+  height: 620px;
+  border-radius: 24px;
+}
+
+.hero-carousel-wrapper .carousel-control-prev,
+.hero-carousel-wrapper .carousel-control-next,
+.hero-carousel-wrapper .carousel-indicators {
+  display: none !important;
+}
+
+/* ── Slide ──────────────────────────────────────── */
+.hero-slide {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.04);
+  transition: transform 6s ease;
+  display: block;
+}
+
+.carousel-item.active .hero-slide-img {
+  transform: scale(1);
+}
+
+/* ── Overlays ───────────────────────────────────── */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(5, 16, 15, 0.72) 0%,
+    rgba(5, 16, 15, 0.28) 60%,
+    rgba(5, 16, 15, 0.08) 100%
+  );
+  z-index: 1;
+}
+
+.hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(to top, var(--bg-deep), transparent);
+  z-index: 2;
+}
+
+/* ── Accent bar ─────────────────────────────────── */
+.hero-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 48px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--accent) 30%,
+    var(--accent-blue-light) 70%,
+    transparent 100%
+  );
+  opacity: 0.6;
+  z-index: 3;
+}
+
+/* ── Slide Content ──────────────────────────────── */
+.hero-slide-content {
+  position: absolute;
+  bottom: 64px;
+  left: 72px;
+  z-index: 4;
+  animation: slideUp 0.7s ease both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-slide-index {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-slide-label {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin: 0 0 12px;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero-slide-sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.hero-slide-divider {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  border-radius: 2px;
+}
+
+/* ── Floating Badge ─────────────────────────────── */
+.hero-badge {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 26, 31, 0.75);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 767px) {
+  .hero-carousel-wrapper .carousel,
+  .hero-carousel-wrapper .carousel-inner,
+  .hero-carousel-wrapper .carousel-item,
+  .hero-slide {
+    height: 420px;
+  }
+
+  .hero-slide-content {
+    left: 32px;
+    bottom: 48px;
+  }
+
+  .hero-accent-bar {
+    left: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-carousel-wrapper .carousel,
+  .hero-carousel-wrapper .carousel-inner,
+  .hero-carousel-wrapper .carousel-item,
+  .hero-slide {
+    height: 280px;
+  }
+
+  .hero-slide-content {
+    left: 22px;
+    bottom: 36px;
+  }
+
+  .hero-slide-label {
+    font-size: 1.8rem;
+  }
+}

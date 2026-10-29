@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap");
+
+/* ── Page Wrapper ───────────────────────────────────────────────── */
+.contact-page {
+  margin-top: 90px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  padding: 54px 24px 80px;
+  margin: 0;
+}
+
+/* ── Page Header ────────────────────────────────────────────────── */
+.contact-header {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.contact-header h1 {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--bg-input);
+  margin-bottom: 12px;
+}
+
+.contact-header h1 span {
+  color: var(--accent);
+}
+
+.contact-header p {
+  color: black;
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── Main Grid: Image + Form ────────────────────────────────────── */
+.contact-main {
+  margin: 10px;
+}
+
+/* ── Form Card ──────────────────────────────────────────────────── */
+.contact-form-card {
+  background: linear-gradient(
+    160deg,
+    var(--bg-deep) 0%,
+    #0a1a1f 55%,
+    #051210 100%
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px 36px;
+  backdrop-filter: blur(10px);
+}
+
+.contact-form-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Form Labels ────────────────────────────────────────────────── */
+.contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-blue-light);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-label .req {
+  color: var(--danger);
+}
+
+/* ── Form Inputs ────────────────────────────────────────────────── */
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  background: var(--bg-input) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  color: var(--text-primary) !important;
+  font-size: 14px !important;
+  font-family: var(--font-body) !important;
+  padding: 10px 14px !important;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s !important;
+  outline: none;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--text-faint) !important;
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(224, 123, 48, 0.15) !important;
+  background: var(--bg-input) !important;
+  color: var(--text-primary) !important;
+}
+
+.contact-select option {
+  background: #0a1a1f;
+  color: var(--text-primary);
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ── Submit Button ──────────────────────────────────────────────── */
+.btn-contact-submit {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+  margin-top: 8px;
+}
+
+.btn-contact-submit:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ── Info Cards Row ─────────────────────────────────────────────── */
+.contact-info-row {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact-info-card {
+  background: linear-gradient(
+    160deg,
+    var(--bg-deep) 0%,
+    #0a1a1f 55%,
+    #051210 100%
+  );
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(224, 123, 48, 0.15);
+  border-color: var(--accent);
+}
+
+.contact-info-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(224, 123, 48, 0.12);
+  border: 1px solid rgba(224, 123, 48, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.contact-info-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.contact-info-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-info-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.contact-info-card a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp card gets a green tint on hover */
+.contact-info-card.whatsapp:hover {
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.15);
+  border-color: #25d366;
+}
+
+.contact-info-card.whatsapp .contact-info-icon {
+  background: rgba(37, 211, 102, 0.1);
+  border-color: rgba(37, 211, 102, 0.25);
+  color: #25d366;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+    margin-top: 24px;
+  }
+
+  .contact-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-img-wrap img {
+    max-width: 100%;
+  }
+}
